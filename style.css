@@ -39,16 +39,21 @@ body {
   font-size: 50px;
   flex-direction: row;
   justify-content: space-evenly;
-  position: absolute;
   right: 0;
   margin: 0;
   height: 70px;
   align-items: center;
   position: fixed; 
   top: 0; 
-
+  z-index:1;
 }
 
+.containerhooby{
+  width: calc(100vw - var(--width-aside));
+  color:var(--p-color);
+  font-size:50px;
+  align-items:flex-end;
+}
 
 li a {
   display: block;
