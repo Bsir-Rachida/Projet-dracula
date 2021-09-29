@@ -20,6 +20,7 @@
   --line-color: rgb(215, 175, 75);
   --spacing1: 8px;
   --spacing2: 16px;
+  --width-aside: 300px;
 }
 
 body {
@@ -28,4 +29,30 @@ body {
   background: url("./images/pattern-curl.png") repeat;
   font-family: var(--main-p-font);
   color: var(--p-color);
+}
+
+.h2xp {
+  text-align: center;
+}
+
+.experience {
+  width: calc(100vw - var(--width-aside));
+  position: absolute;
+  right: 0;
+}
+
+.containerxp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.firstxp {
+  width: 300px;
+}
+
+.imgxp {
+  width: 300px;
+  border: 2px outset silver;
 }
