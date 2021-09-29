@@ -1,6 +1,6 @@
 @font-face {
   font-family: Grabstein;
-  src: url("./fonts/Grabstein\ Gotik.otf");
+  src: url("fonts/GrabsteinGotik.otf");
 }
 
 @font-face {
@@ -20,6 +20,7 @@
   --line-color: rgb(215, 175, 75);
   --spacing1: 8px;
   --spacing2: 16px;
+  --width-aside: 300px;
 }
 
 body {
@@ -28,4 +29,30 @@ body {
   background: url("./images/pattern-curl.png") repeat;
   font-family: var(--main-p-font);
   color: var(--p-color);
+}
+
+.navbar {
+  display:flex;
+  list-style-type: none;
+  width: calc(100vw - var(--width-aside));
+  font-family: var(--title-font);
+  font-size: 50px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  height: 100px;
+  align-items: center;
+}
+
+li a {
+  display: block;
+  color: var(--p-color);
+  text-decoration: none;
+}
+
+a:hover
+{
+  color:var(--aside-color);
 }
