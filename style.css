@@ -22,6 +22,7 @@
   --spacing2: 16px;
   --width-aside: 300px;
   --spacing3: 48px;
+  --ban-color: rgba(0, 0, 0, 0.70);
 }
  header {
   display: flex;
@@ -42,15 +43,15 @@ body {
 
 
 .container-ban {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 500px;
+  position: relative;
+  height: 450px;
   width: calc(100vw - var(--width-aside));
-  background: url('./images/sonn.png') no-repeat;
   background-size: cover;
-  
+  background: linear-gradient(var(--ban-color), var(--ban-color)), url(./images/sonn.png);
+    
 }
 
 .container-ban p {
@@ -58,8 +59,10 @@ body {
  padding-right:  var(--spacing3); 
   position: absolute;
  font-family: var(--bio-font);
- column-count: var(--p-color);
- font-size: 25px;
+ color: white;
+ font-size: 30px;
  text-indent: 10%;
+ font-weight: bold 2px;
+ text-shadow: black 1px 1px 1px;
 }
 
