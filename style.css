@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
 @font-face {
   font-family: Grabstein;
   src: url("./fonts/Grabstein\ Gotik.otf");
@@ -7,8 +9,6 @@
   font-family: Zai;
   src: url("./fonts/zai_ItalicHandCalligraphy.otf");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 
 :root {
   --title-font: Grabstein;
@@ -31,28 +31,43 @@ body {
   color: var(--p-color);
 }
 
-.h2xp {
-  text-align: center;
-}
-
-.experience {
-  width: calc(100vw - var(--width-aside));
+main {
   position: absolute;
   right: 0;
 }
 
-.containerxp {
+.experience,
+.formation {
+  width: calc(100vw - var(--width-aside));
+  margin-bottom: 150px;
+}
+
+.containerxp,
+.containerform {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 40px;
 }
 
-.firstxp {
-  width: 300px;
+.h2timeline {
+  text-align: center;
 }
 
-.imgxp {
+.description {
   width: 300px;
-  border: 2px outset silver;
+  font-family: var(--main-p-font);
+}
+
+.imgtimeline {
+  width: 300px;
+  border: 3px outset rgb(105, 105, 105);
+}
+
+.ultimeline {
+  list-style-type: none;
+}
+
+.ultimeline li {
+  padding: var(--spacing1);
 }
