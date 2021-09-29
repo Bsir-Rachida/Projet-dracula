@@ -1,6 +1,6 @@
 @font-face {
   font-family: Grabstein;
-  src: url("./fonts/Grabstein\ Gotik.otf");
+  src: url("fonts/GrabsteinGotik.otf");
 }
 
 @font-face {
@@ -20,7 +20,17 @@
   --line-color: rgb(215, 175, 75);
   --spacing1: 8px;
   --spacing2: 16px;
+  --width-aside: 300px;
+  --spacing3: 48px;
 }
+ header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+  
+
 
 body {
   box-sizing: border-box;
@@ -29,3 +39,27 @@ body {
   font-family: var(--main-p-font);
   color: var(--p-color);
 }
+
+
+.container-ban {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 500px;
+  width: calc(100vw - var(--width-aside));
+  background: url('./images/sonn.png') no-repeat;
+  background-size: cover;
+  
+}
+
+.container-ban p {
+ padding-left:  var(--spacing3);
+ padding-right:  var(--spacing3); 
+  position: absolute;
+ font-family: var(--bio-font);
+ column-count: var(--p-color);
+ font-size: 25px;
+ text-indent: 10%;
+}
+
