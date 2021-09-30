@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
 @font-face {
   font-family: Grabstein;
   src: url("fonts/GrabsteinGotik.otf");
@@ -7,8 +9,6 @@
   font-family: Zai;
   src: url("./fonts/zai_ItalicHandCalligraphy.otf");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 
 :root {
   --title-font: Grabstein;
@@ -30,6 +30,8 @@ body {
   font-family: var(--main-p-font);
   color: var(--p-color);
 }
+
+/* header navbar */
 
 .navbar {
   display:flex;
@@ -57,4 +59,58 @@ li a {
 a:hover
 {
   color:var(--aside-color);
+
+/* main experience et formation*/
+  
+main {
+  position: absolute;
+  right: 0;
 }
+
+.experience,
+.formation {
+  width: calc(100vw - var(--width-aside));
+  margin-bottom: 150px;
+}
+
+.parcours {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.h2timeline {
+  text-align: center;
+}
+
+.description {
+  width: 300px;
+}
+
+.description p {
+  margin-top: 0;
+}
+
+.description h3 {
+  margin-bottom: 0;
+}
+
+.imgtimeline {
+  width: 300px;
+  border: 1px outset rgb(92, 85, 89);
+}
+
+.ultimeline {
+  list-style-type: none;
+  padding-left: 3px;
+}
+
+.ultimeline li {
+  padding: 4px;
+}
+
+.year {
+  font-size: 24px;
+}
+
