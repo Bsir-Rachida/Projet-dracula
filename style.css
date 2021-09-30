@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: Grabstein;
-  src: url("./fonts/Grabstein\ Gotik.otf");
+  src: url("fonts/GrabsteinGotik.otf");
 }
 
 @font-face {
@@ -31,6 +31,37 @@ body {
   color: var(--p-color);
 }
 
+/* header navbar */
+
+.navbar {
+  display:flex;
+  list-style-type: none;
+  width: calc(100vw - var(--width-aside));
+  font-family: var(--title-font);
+  font-size: 50px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  right: 0;
+  margin: 0;
+  height: 70px;
+  align-items: center;
+  position: fixed; 
+  top: 0; 
+  z-index:1;
+}
+
+li a {
+  display: block;
+  color: var(--p-color);
+  text-decoration: none;
+}
+
+a:hover
+{
+  color:var(--aside-color);
+
+/* main experience et formation*/
+  
 main {
   position: absolute;
   right: 0;
@@ -82,3 +113,4 @@ main {
 .year {
   font-size: 24px;
 }
+
