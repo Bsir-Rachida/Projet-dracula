@@ -21,6 +21,13 @@
   --spacing1: 8px;
   --spacing2: 16px;
   --width-aside: 300px;
+  --spacing3: 48px;
+  --ban-color: rgba(0, 0, 0, 0.70);
+}
+
+ header {
+  display: flex;
+  justify-content: flex-end;
 }
 
 body {
@@ -30,6 +37,35 @@ body {
   font-family: var(--main-p-font);
   color: var(--p-color);
 }
+
+/*biography*/
+
+.container-ban {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  height: 450px;
+  width: calc(100vw - var(--width-aside));
+  background-size: cover;
+  background: linear-gradient(var(--ban-color), var(--ban-color)), url(./images/sonn.png);
+    
+}
+
+.container-ban p {
+ padding-left:  var(--spacing3);
+ padding-right:  var(--spacing3); 
+  position: absolute;
+ font-family: var(--bio-font);
+ color: white;
+ font-size: 30px;
+ text-indent: 10%;
+ font-weight: bold 2px;
+ text-shadow: black 1px 1px 1px;
+}
+
+/*end biography*/
+
 /*css de l'aside */
 h1{
   font-family: Grabstein;
@@ -69,7 +105,6 @@ aside h3{
   text-align: center;
 }
 
-
 aside p{
   font-size: 20px ;
   text-align: center;
@@ -103,6 +138,7 @@ aside p{
 }
 
 /*fin css aside*/
+
 /* header navbar */
 
 .navbar {
@@ -132,6 +168,7 @@ li a {
 a:hover {
   color: var(--aside-color);
 }
+/*end navbar*/
 
 /* main experience et formation*/
 
@@ -186,3 +223,4 @@ main {
 .year {
   font-size: 24px;
 }
+/*end experience formation*/
