@@ -20,12 +20,13 @@
   --line-color: rgb(215, 175, 75);
   --spacing1: 8px;
   --spacing2: 16px;
+  --spacing4: 60px;
+  --spacing3: 150px;
   --width-aside: 300px;
-  --spacing3: 48px;
   --ban-color: rgba(0, 0, 0, 0.70);
 }
 
- header {
+header {
   display: flex;
   justify-content: flex-end;
 }
@@ -42,10 +43,10 @@ body {
 
 .container-ban {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   position: relative;
-  height: 450px;
+  height: 400px;
   width: calc(100vw - var(--width-aside));
   background-size: cover;
   background: linear-gradient(var(--ban-color), var(--ban-color)), url(./images/sonn.png);
@@ -54,14 +55,28 @@ body {
 
 .container-ban p {
  padding-left:  var(--spacing3);
- padding-right:  var(--spacing3); 
-  position: absolute;
+ padding-right: 80px; 
+ position: absolute;
  font-family: var(--bio-font);
  color: white;
- font-size: 30px;
+ font-size: 25px;
  text-indent: 10%;
  font-weight: bold 2px;
  text-shadow: black 1px 1px 1px;
+ margin-bottom: 0;
+}
+
+.title {
+  position: absolute;
+  font-family: var(--title-font);
+  font-size:var(--spacing4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  z-index: 2;
+  width: calc(100vw - var(--width-aside));
+
 }
 
 /*end biography*/
@@ -86,7 +101,7 @@ aside{
   background-image:url("./images/sang.png");
   background-repeat: no-repeat;
   background-position: bottom;
-
+  z-index:2;
   border-right: 3px double var(--line-color);
 }
 .contact{
@@ -146,7 +161,7 @@ aside p{
   list-style-type: none;
   width: calc(100vw - var(--width-aside));
   font-family: var(--title-font);
-  font-size: 50px;
+  
   flex-direction: row;
   justify-content: space-evenly;
   right: 0;
@@ -163,6 +178,7 @@ li a {
   display: block;
   color: var(--p-color);
   text-decoration: none;
+  font-size: 50px;
 }
 
 a:hover {
@@ -173,8 +189,7 @@ a:hover {
 /* main experience et formation*/
 
 main {
-  position: absolute;
-  right: 0;
+  margin-left:300px;
 }
 
 .experience,
@@ -225,7 +240,7 @@ main {
 }
 /*end experience formation*/
 
-
+/* hobbies */
 h2{
 
   text-align: center;
@@ -253,5 +268,33 @@ i{
   span{
     margin:10px;
   }
- 
+/*fin hobbies*/
+
+/*footer*/
+footer{
+  background:var(--background-color);
+  
+  width: calc(100vw - var(--width-aside));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 300px;
+}
+
+footer p, a {
+  height: 30px;
+  color: var(--main-p-font);
+  font-size: var(--spacing2);
+  text-decoration: none;
+  
+
+}
+
+footer a:hover {
+color: var(--aside-color);
+
+  }
+/*end of footer */
+
 
