@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
 @font-face {
   font-family: Grabstein;
-  src: url("./fonts/Grabstein\ Gotik.otf");
+  src: url("fonts/GrabsteinGotik.otf");
 }
 
 @font-face {
@@ -8,12 +10,10 @@
   src: url("./fonts/zai_ItalicHandCalligraphy.otf");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
-
 :root {
   --title-font: Grabstein;
   --bio-font: Zai;
-  --main-p-font: "Roboto Condensed";
+  --main-p-font:"Roboto Condensed";
   --background-color: rgb(36, 36, 36);
   --aside-color: rgb(107, 28, 44);
   --p-color: rgb(230, 230, 230);
@@ -21,6 +21,13 @@
   --spacing1: 8px;
   --spacing2: 16px;
   --width-aside: 300px;
+  --spacing3: 48px;
+  --ban-color: rgba(0, 0, 0, 0.70);
+}
+
+ header {
+  display: flex;
+  justify-content: flex-end;
 }
 
 body {
@@ -30,6 +37,195 @@ body {
   font-family: var(--main-p-font);
   color: var(--p-color);
 }
+
+/*biography*/
+
+.container-ban {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  height: 450px;
+  width: calc(100vw - var(--width-aside));
+  background-size: cover;
+  background: linear-gradient(var(--ban-color), var(--ban-color)), url(./images/sonn.png);
+    
+}
+
+.container-ban p {
+ padding-left:  var(--spacing3);
+ padding-right:  var(--spacing3); 
+  position: absolute;
+ font-family: var(--bio-font);
+ color: white;
+ font-size: 30px;
+ text-indent: 10%;
+ font-weight: bold 2px;
+ text-shadow: black 1px 1px 1px;
+}
+
+/*end biography*/
+
+/*css de l'aside */
+h1{
+  font-family: Grabstein;
+  font-size: 3em;
+  margin: 20px 20px 0 20px;
+}
+aside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color:var(--aside-color);
+  background-image:url("./images/sang.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  border-right: 3px double var(--line-color);
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+.portrait{
+  width:180px;
+}
+
+aside h3{
+  margin-top:var(--spacing1);
+  text-align: center;
+}
+
+aside p{
+  font-size: 20px ;
+  text-align: center;
+  font-family: var(--p-color);
+  margin: var(--spacing1);
+  line-height: 30px;
+
+}
+.Skills{
+  padding: var(--spacing1);
+  margin: var(--spacing2);
+}
+.Skills h3:first-child{
+  margin-top: 0;
+}
+.Skills img{
+  width: 150px;
+}
+.arabesque{
+  width: 70px;
+}
+.reseaux{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+.reseaux img{
+  width: 30px;
+  margin: var(--spacing1);
+}
+
+/*fin css aside*/
+
+/* header navbar */
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  width: calc(100vw - var(--width-aside));
+  font-family: var(--title-font);
+  font-size: 50px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  right: 0;
+  margin: 0;
+  height: 70px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(25, 25, 25);
+}
+
+li a {
+  display: block;
+  color: var(--p-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--aside-color);
+}
+/*end navbar*/
+
+/* main experience et formation*/
+
+main {
+  position: absolute;
+  right: 0;
+}
+
+.experience,
+.formation {
+  width: calc(100vw - var(--width-aside));
+  margin-bottom: 150px;
+}
+
+.parcours {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.h2timeline {
+  text-align: center;
+}
+
+.description {
+  width: 300px;
+}
+
+.description p {
+  margin-top: 0;
+}
+
+.description h3 {
+  margin-bottom: 0;
+}
+
+.imgtimeline {
+  width: 300px;
+  border: 1px outset rgb(92, 85, 89);
+}
+
+.ultimeline {
+  list-style-type: none;
+  padding-left: 3px;
+}
+
+.ultimeline li {
+  padding: 4px;
+}
+
+.year {
+  font-size: 24px;
+}
+/*end experience formation*/
+
+/*footer*/
 footer{
   background: url(images/243879463_2102645923225344_6695066621447778982_n.png) no-repeat;
   background-position: center;
@@ -56,3 +252,5 @@ footer a:hover {
 color: var(--aside-color);
 
   }
+/*end of footer */
+
