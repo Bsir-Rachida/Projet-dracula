@@ -271,6 +271,36 @@ text-align:right;
 }
 /*end experience formation*/
 
+/* hobbies */
+h2{
+
+  text-align: center;
+  width: calc(100vw - var(--width-aside));
+  font-family: var(--title-font);
+  font-size: 50px;
+}
+
+.containerhobbies{
+  display: flex;
+  width: calc(100vw - var(--width-aside));
+  margin-top:30 px;
+  color:var(--p-color);
+ 
+  justify-content: space-evenly;
+  
+}
+i{
+  font-size: 30px;
+}
+.bat{
+  max-width: 70px;
+  max-height: 100px;
+}
+  span{
+    margin:10px;
+  }
+/*fin hobbies*/
+
 /*footer*/
 footer{
   background:var(--background-color);
@@ -297,4 +327,5 @@ color: var(--aside-color);
 
   }
 /*end of footer */
+
 
