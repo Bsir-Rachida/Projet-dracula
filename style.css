@@ -13,7 +13,7 @@
 :root {
   --title-font: Grabstein;
   --bio-font: Zai;
-  --main-p-font: "Roboto Condensed";
+  --main-p-font:"Roboto Condensed";
   --background-color: rgb(36, 36, 36);
   --aside-color: rgb(107, 28, 44);
   --p-color: rgb(230, 230, 230);
@@ -30,7 +30,79 @@ body {
   font-family: var(--main-p-font);
   color: var(--p-color);
 }
+/*css de l'aside */
+h1{
+  font-family: Grabstein;
+  font-size: 3em;
+  margin: 20px 20px 0 20px;
+}
+aside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color:var(--aside-color);
+  background-image:url("./images/sang.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
 
+  border-right: 3px double var(--line-color);
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+.portrait{
+  width:180px;
+}
+
+aside h3{
+  margin-top:var(--spacing1);
+  text-align: center;
+}
+
+
+aside p{
+  font-size: 20px ;
+  text-align: center;
+  font-family: var(--p-color);
+  margin: var(--spacing1);
+  line-height: 30px;
+
+}
+.Skills{
+  padding: var(--spacing1);
+  margin: var(--spacing2);
+}
+.Skills h3:first-child{
+  margin-top: 0;
+}
+.Skills img{
+  width: 150px;
+}
+.arabesque{
+  width: 70px;
+}
+.reseaux{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+.reseaux img{
+  width: 30px;
+  margin: var(--spacing1);
+}
+
+/*fin css aside*/
 /* header navbar */
 
 .navbar {
