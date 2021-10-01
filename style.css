@@ -58,7 +58,7 @@ body {
   position: absolute;
  font-family: var(--bio-font);
  color: white;
- font-size: 30px;
+ font-size: 28gpx;
  text-indent: 10%;
  font-weight: bold 2px;
  text-shadow: black 1px 1px 1px;
@@ -146,7 +146,7 @@ aside p{
   list-style-type: none;
   width: calc(100vw - var(--width-aside));
   font-family: var(--title-font);
-  font-size: 50px;
+  
   flex-direction: row;
   justify-content: space-evenly;
   right: 0;
@@ -163,6 +163,7 @@ li a {
   display: block;
   color: var(--p-color);
   text-decoration: none;
+  font-size: 50px;
 }
 
 a:hover {
@@ -173,8 +174,7 @@ a:hover {
 /* main experience et formation*/
 
 main {
-  position: absolute;
-  right: 0;
+  margin-left:300px;
 }
 
 .experience,
@@ -227,18 +227,14 @@ main {
 
 /*footer*/
 footer{
-  background: url(images/243879463_2102645923225344_6695066621447778982_n.png) no-repeat;
-  background-position: center;
-  right: 0;
   background:var(--background-color);
-  position:absolute;
-  bottom:0;
+  
   width: calc(100vw - var(--width-aside));
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
+  margin-left: 300px;
 }
 
 footer p, a {
@@ -246,6 +242,8 @@ footer p, a {
   color: var(--main-p-font);
   font-size: var(--spacing2);
   text-decoration: none;
+  
+
 }
 
 footer a:hover {
