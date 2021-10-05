@@ -358,9 +358,25 @@ footer p, a {
 
 
 footer a:hover {
-color: var(--aside-color);
+  color: var(--aside-color);
 
   }
 /*end of footer */
 
+/*media screen container-ban and footer*/
+@media screen and (min-width: 360px) and (max-width: 550px) {
+    .container-ban {
+      display: none;
+    }  
+
+    footer {
+      width: 100vw;
+      margin: auto;
+      align-items : flexstart;
+      flex-direction : column;
+      padding-bottom: var(--spacing2);
+      padding-left: var(--spacing2);
+    }
+}
+/*end media screen container-ban and footer*/
 
