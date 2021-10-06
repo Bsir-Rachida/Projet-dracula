@@ -215,18 +215,29 @@ main {
   align-items: center;
   width: calc(100vw - var(--width-aside));
   margin-bottom: var(--spacing3);
-
   font-size: var(--font-size-third);
 }
-.arabesque {
+
+.arabesque{
   width: 100px;
 }
 
 .parcours {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 80%;
+  gap: var(--spacing6)
+}
+
+.sep{
+  margin-inline-end: 1em;
+  width:25%;
+}
+
+.sep2{
+  margin-inline-start: 1em;
+  width: 25%;
 }
 
 .h2timeline {
@@ -250,7 +261,7 @@ main {
 }
 
 .description {
-  width: 400px;
+  width:calc(100% / 2.45);
   background-color: var(--color-light-opacity);
   box-shadow: 10px 10px 10px black;
 }
@@ -270,7 +281,7 @@ main {
 }
 
 .imgtimeline {
-  width: 400px;
+  width: calc(100% / 2.45);
   box-shadow: var(--shadow-image);
 }
 
@@ -370,6 +381,28 @@ footer a:hover {
 /*MEDIA QUERY*/
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
+    body{
+    position: relative;
+  }
+
+  /*responsive aside */
+
+  aside{
+    position: initial;
+    z-index: 0;
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 900px;
+  }
+
+  .reseaux{
+    position: absolute;
+    bottom:0;
+    justify-content: flex-end;
+    padding-right: var(--spacing1);
+    padding-bottom: var(--spacing1);
+  }
+  /* END responsive aside */
   
   /* Experience & Formation Media Query */
   
@@ -398,7 +431,6 @@ footer a:hover {
 /* End of Experience & Formation Media Query */
   
 /*media screen navbar and hobbies*/
-
   .navbar {
     z-index :0;
   }  
@@ -435,5 +467,6 @@ footer a:hover {
       padding-left: var(--spacing2);
     }
 /*end media screen container-ban and footer*/
+
 }
 
