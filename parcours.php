@@ -45,6 +45,7 @@ $trainings = [
         'subtitle'=> 'AFPA, Tours',
         'image'=> 'hotel keys.jpg',
         'date'=> '2019', 
+        
     ],
 
     [

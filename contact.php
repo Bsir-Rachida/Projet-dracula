@@ -1,4 +1,29 @@
-
+<?php
+$data = array_map('trim', $_POST);
+$errors= [];
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (empty($_POST['user_lastName'])) {
+            $errors[]= 'Merci de renseigner votre nom';
+        }
+        if (empty($_POST['user_firstName'])) {
+            $errors[]= 'Merci de renseigner votre prénom';
+        }
+        if (empty($_POST['user_phone'])) {
+            $errors[]= 'Merci de renseigner votre numéro de téléphone';
+        }
+        if (empty($_POST['user_mail'])) {
+            $errors[]= 'Merci de renseigner votre mail';
+        }elseif (!filter_var($_POST['user_mail'], FILTER_VALIDATE_EMAIL)) {
+            $errors[]= 'L\'adresse mail n\'est pas au bon format';
+        }
+        if (empty($_POST['user_message'])) {
+            $errors[]= 'Merci d\'indiquer votre message' . '<br>';
+        }
+        if(empty($errors)) {
+            header('Location: /contact.php');
+        }
+    }
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +40,10 @@
 <header>
 
     <ul class = "navbar">
-      <li> <a href = "#container-ban">About</a></li>
-      <li> <a href = "#experience">Expériences</a></li>
-      <li> <a href = "#formation">Formations</a></li>
-      <li> <a href = "#hobby">Hobbies</a></li>
+      <li> <a href = "index.php#container-ban">About</a></li>
+      <li> <a href = "index.php#experience">Expériences</a></li>
+      <li> <a href = "index.php#formation">Formations</a></li>
+      <li> <a href = "index.php#hobby">Hobbies</a></li>
       <li> <a href = "contact.php">Contact</a></li>
     </ul>
   
@@ -56,30 +81,43 @@
 <!--end Aside-->
   
 <main>
-<form action="" method="post">
-    <div>
-        <label for="lastName">Nom :</label>
-        <input type="text" id="lastName" name="user_lastName">
-    </div>
-    <div>
-        <label for="firstName">Prénom :</label>
-        <input type="text" id="firstName" name="user_firstName">
-    </div>
-    <div>
-        <label for="numberPhone">Téléphone :</label>
-        <input type="number" id="numberPhone" name="user_phone">
-    </div>
-    <div>
-        <label for="mail">E-mail :</label>
-        <input type="email" id="mail" name="user_mail">
-    </div>
+    <div class="container-form">
+<form action="" method="post" >
+<?php if (!empty($errors)) {
+      foreach(!$errors as $error) {
+           echo $error . '<br>'.'<br>';
+        }
+    } 
+    ?>
+    <div class="forms">
+        <div>
+            <label for="lastName" class= "labelForm">Nom :</label>
+            <input type="text" id="lastName" name="user_lastName" value="<?= $data['user_lastName'] ?? '' ?>" required>
+        </div>
+         <div>
+            <label for="firstName" class= "labelForm">Prénom :</label>
+            <input type="text" id="firstName" name="user_firstName" value="<?= $data['user_firstName'] ?? '' ?>" required>
+        </div>
+        <div>
+            <label for="numberPhone" class= "labelForm">Téléphone :</label>
+            <input type="tel" id="numberPhone" name="user_phone" value="<?= $data['user_phone'] ?? '' ?>" required>
+        </div>
+        <div>
+            <label for="mail" class= "labelForm">E-mail :</label>
+            <input type="email" id="mail" name="user_mail" value="<?= $data['user_mail'] ?? '' ?>" required>
+        </div>
 
-    <div>
-        <label for="msg">Message :</label>
-        <textarea id="msg" name="user_message"></textarea>
+        <div>
+            <label for="msg" class= "labelForm">Message :</label>
+            <textarea id="msg" name="user_message" value="<?= $data['user_message'] ?? '' ?>" required></textarea>
+        </div>
+        <div class= "button">
+            <button type= 'submit'>Envoyer</button>
+        </div>      
     </div>
 </form>
-    
+
+</div>
 </main>
   
 <footer>

@@ -53,7 +53,9 @@ body {
   background: url("./images/pattern-curl.png") repeat;
   font-family: var(--main-p-font);
   color: var(--p-color);
+  position: relative;
 }
+
 
 /*biography*/
 
@@ -151,7 +153,7 @@ aside p{
   width: 150px;
 }
 .arabesque{
-  width: 70px;
+  width: var(--spacing8);
 }
 .reseaux{
   width: 100%;
@@ -176,7 +178,7 @@ aside p{
   justify-content: space-evenly;
   right: 0;
   margin: 0;
-  height: 70px;
+  height: var(--spacing8);
   align-items: center;
   position: fixed;
   top: 0;
@@ -330,7 +332,7 @@ i{
 }
 
 .batsitting{
-  width: 70px;
+  width: var(--spacing8);
 }
 
 span{
@@ -356,6 +358,7 @@ footer{
   align-items: center;
   box-shadow: 0 -10px 30px black;
   margin-left:300px;
+
 }
 
 footer p, a {
@@ -367,12 +370,75 @@ footer p, a {
 
 
 footer a:hover {
-color: var(--aside-color);
+  color: var(--aside-color);
 
   }
 /*end of footer */
 
 /*formulaire */
 
+.container-form {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: var(--spacing3);
+  font-size: 20px;
+  color: var(--aside-color);
+  font-weight: bold;
+}
 
+.forms {
+  width: 400px;
+}
 
+input {
+  height: 40px;
+  width: 400px;
+  margin-bottom: 30px;
+  background-color: var(--color-light-opacity);
+  box-shadow: var(--shadow-image);
+  border: 1px solid var(--color-light-);
+  color: var(--p-color);
+  font-size: 20px;
+}
+
+textarea {
+  height: 150px;
+  width: 400px;
+  margin-bottom: 30px;
+  background-color: var(--color-light-opacity);
+  box-shadow: var(--shadow-image);
+  border: 1px solid var(--color-light-);
+  color: var(--p-color);
+  font-size: 20px;
+}
+.labelForm {
+  display: inline-block;
+  text-align: right;
+  font-size: var(--spacing3);
+  color: var(--p-color);
+}
+
+ button {
+   font-size: 20px;
+   border: none;
+   border-radius: 4px;
+   background-color: var(--aside-color);
+   color: var(--p-color);
+   padding-inline: 8px;
+   padding-block: 4px;
+   font-family: var(--main-p-font);
+   position: relative;
+   float: right;
+}
+
+button:hover {
+  filter: brightness(120%);
+}
+
+button:active {
+  filter: brightness(70%); 
+}
