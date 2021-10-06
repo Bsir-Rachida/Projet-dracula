@@ -221,15 +221,24 @@ main {
   
   font-size: var(--font-size-third);
 }
-.arabesque{
+.arabesque {
   width: 100px;
 }
 
 .parcours {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   width: 80%;
+}
+.skills, .training {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.parcours .skills:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.parcours .training:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .h2timeline {

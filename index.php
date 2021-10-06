@@ -1,3 +1,7 @@
+<?php
+require 'parcours.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,49 +74,25 @@
     </div>
 
   
-    <div class='parcours'>
-        <div class='description'>
-            <h3>Stage réceptionniste de nuit</h3>
-            <p>Hôtel Four Seasons, Paris, France</p>
+    <div class="parcours">
+        <?php foreach ($skills as $skill) : ?>
+        <div class=skills>    
+        <div class="description">
+            <h3><?= $skill['title'] ?></h3>
+            <p><?= $skill['subtitle'] ?></p>
             <ul class='ultimeline'>
-                <li> Accueillir et renseigner le client sur les conditions de séjour</li>
-                <li> Tenue du planning de réservation</li>
-                <li> Traitement du courrier</li>
-                <li> Synchroniser l'activité de l'équipe</li>
+            <?php foreach ($skill['items'] as $item) : ?>
+                <li><?= $item ?></li>
+            <?php endforeach; ?>
             </ul>
+             
         </div>
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>2021<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-        <img src='./images/hotel entrance.jpg' class='imgtimeline' alt='image hôtel four seasons'>
+        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br><?= $skill['date'] ?><br><img src = "./images/flying-bat-l.png" class="bat"></div>
+        <img src='./images/<?= $skill['image'] ?>'class='imgtimeline' alt='image hôtel four seasons'>
+        </div>
+        <?php endforeach; ?>
     </div>
     
-    <div class='parcours'>
-        <img src='./images/hotel reception.jpg' class='imgtimeline' alt='image empreinte hôtel'>
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>2020<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-        <div class='description'>
-            <h3>Stage réceptionniste de nuit</h3>
-            <p>Empreinte Hôtel, Orléans, France</p>
-            <ul class='ultimeline'>
-                <li> Accueillir et renseigner le client sur les conditions de séjour</li>
-                <li> Tenue du planning de réservation</li>
-                <li> Traitement du courrier</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class='parcours'>
-        <div class='description'>
-            <h3>Oenologue</h3>
-            <p>Château de Bran, Région Tansylvanienne, Roumanie</p>
-            <ul class='ultimeline'>
-                <li> Oenologue en production viticole familiale, les 'Vins Tepes'</li>
-                <li> Vinification, amélioration de la qualité du vins</li>
-                <li> Dégustations de vins</li>
-            </ul>
-        </div>
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>Depuis<br>1476<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-        <img src='./images/castle.jpg' class='imgtimeline' alt='image château de Bran'>
-    </div>
-  
 </section>
 
 <section id ="formation" class='formation'>
@@ -126,28 +106,20 @@
     </div>
 
     <div class='parcours'>
-    
-        <img src='./images/hotel keys.jpg' class='imgtimeline' alt='image clefs hôtel'>
+        <?php foreach ($trainings as $training) : ?>
+        <div class= 'training'>
+        <img src='./images/<?= $training['image'] ?>'class='imgtimeline' alt='image clefs hôtel'>
 
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>2019<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-
-        <div class='description'>
-
-            <h3>Titre professionnel réceptionniste en hôtellerie</h3>
-            <p>AFPA, Tours</p>  
-
+        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br><?= $training['date'] ?><br><img src = "./images/flying-bat-l.png" class="bat">
         </div>
-
+        <div class='description'>
+            <h3><?= $training['title'] ?></h3>
+            <p><?= $training['subtitle'] ?></p>  
+        </div>
+        </div>
+        <?php endforeach; ?>
     </div>
 
-    <div class='parcours'>
-        <div class='description'>
-            <h3>Apprenti dans l'entreprise 'Vins Tepes'</h3>
-            <p>Château de Bran, Région Tansylvanienne, Roumanie</p>   
-        </div>
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>1476<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-        <img src='./images/cave vin.jpg' class='imgtimeline' alt='image cave à vins'>
-    </div>
 </section>
   
 <section id="hobby" class="hobby">
