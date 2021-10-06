@@ -226,7 +226,7 @@ main {
 }
 
 .parcours {
-  width: 80%;
+  width: 100%;
 }
 
 .skills,
@@ -234,7 +234,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
   gap: var(--spacing6);
   flex-wrap: wrap;
   align-items: center;
@@ -279,7 +278,7 @@ main {
 }
 
 .description {
-  width: calc(100% / 2.45);
+  width: 400px;
   background-color: var(--color-light-opacity);
   box-shadow: 10px 10px 10px black;
 }
@@ -299,7 +298,7 @@ main {
 }
 
 .imgtimeline {
-  width: calc(100% / 2.45);
+  width: 400px;
   box-shadow: var(--shadow-image);
 }
 
@@ -431,33 +430,10 @@ footer a:hover {
 
   .experience,
   .formation {
-    width: 100vw;
+    width: 90vw;
     margin: 0;
   }
-  .sep,
-  .sep2 {
-    display: none;
-  }
-  .parcours {
-    flex-direction: column;
-  }
-
-  .experience .parcours:nth-child(odd) {
-    flex-direction: column-reverse;
-  }
-
-  .formation .parcours:nth-child(even) {
-    flex-direction: column-reverse;
-  }
-
-  .imgtimeline {
-    display: none;
-  }
-
-  .description {
-    width: auto;
-  }
-
+  
   /* End of Experience & Formation Media Query */
 
   /*media screen navbar and hobbies*/
@@ -525,29 +501,6 @@ header{
   height: 45px;
 }
 
-.hobbies {
-    background-color: var(--color-light-opacity);
-    box-shadow: var(--shadow-image);
-    align-items: flex-start;
-    width: max-content;
-    height: 300px;
-    flex-direction: column;
-    margin-block: var(--spacing6);
-  }
-
-  .cocktail,
-  .music,
-  .batSitting {
-    height: 45px;
-    padding: 25px;
-    background: none;
-    box-shadow: none;
-  }
-  .hobby {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   /*end media screen nav-bar and hobbies*/
 
   /*media screen container-ban and footer*/
@@ -565,3 +518,81 @@ header{
   }
   /*end media screen container-ban and footer*/
 }
+
+@media screen and (max-width:1300px){
+  
+  .skills, .training {
+    flex-direction: row;
+    gap:0;
+    justify-content: space-around;
+    padding-inline: var(--spacing2);
+  }
+  .description{
+    width: 65%;
+    margin-block: var(--spacing4);
+  }
+
+  .year{
+    order:-1;
+  }
+
+  .imgtimeline {
+    display:none;
+  }
+
+  .parcours .skills:nth-child(even) {
+    flex-direction: row;
+  }
+  
+  .parcours .training:nth-child(even) {
+    flex-direction: row;
+  }
+
+
+.hobbies {
+  background-color: var(--color-light-opacity);
+  box-shadow: var(--shadow-image);
+  align-items: flex-start;
+  width: max-content;
+  height: 300px;
+  flex-direction: column;
+  margin-block: var(--spacing6);
+}
+
+.cocktail,
+.music,
+.batSitting {
+  height: 45px;
+  padding: 25px;
+  background: none;
+  box-shadow: none;
+}
+.hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+@media screen and (max-width:1000px){
+  .sep, .sep2{
+    display:none;
+  }
+
+  .title {
+    font-size: 1.7em;
+  }
+
+  .container-ban p {
+    font-size: 1.3em;
+  }
+
+  li a {
+    font-size: var(--font-size-third);
+  }
+}
+
+
+
+
+
