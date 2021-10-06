@@ -563,7 +563,7 @@ header{
 .music,
 .batSitting {
   height: 45px;
-  padding: 25px;
+  padding: var(--spacing3);
   background: none;
   box-shadow: none;
 }
