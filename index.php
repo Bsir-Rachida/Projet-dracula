@@ -24,9 +24,9 @@ require 'parcours.php';
     <ul class = "navbar">
       <li> <a href = "#container-ban">About</a></li>
       <li> <a href = "#experience">Expériences</a></li>
-      <li> <img src="./images/coffin.png" class = "coffin"></li>
       <li> <a href = "#formation">Formations</a></li>
       <li> <a href = "#hobby">Hobbies</a></li>
+      <li> <a href = "contact.php">Contact</a></li>
     </ul>
   
 </header>

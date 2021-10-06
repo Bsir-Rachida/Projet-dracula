@@ -20,8 +20,7 @@ $skills = [
         'items'=> [
             'Accueillir et renseigner le client sur les conditions de séjour',
             'Tenue du planning de réservation',
-            'Traitement du courrier',
-            
+            'Traitement du courrier',  
         ],
         'image'=> 'hotel reception.jpg',
         'date'=> '2020',
