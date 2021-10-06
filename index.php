@@ -15,22 +15,32 @@ require 'parcours.php';
   
 <body>
 
-    <header>
-        
-        <div id ="container-ban" class = "container-ban">  
-            <div class = "title">Réceptionniste de nuit</div>    
-            <p>" Oenolgue de père en fils, je souffre des préjugés à mon encontre depuis la pandémie, j'ai donc immigré dans les pays occidentaux, dont la France afin de me reconvertir en réceptionniste de nuit...A l'abri de la lumière..."</p>
-        </div>
-
-        <ul class = "navbar">
-            <li> <a href = "#container-ban">About</a></li>
-            <li> <a href = "#experience">Expériences</a></li>
-            <li> <img src="./images/coffin.png" class = "coffin"></li>
-            <li> <a href = "#formation">Formations</a></li>
-            <li> <a href = "#hobby">Hobbies</a></li>
-        </ul>
+<header>
     
-    </header>
+    <div id ="container-ban" class = "container-ban">  
+        <div class = "title">Réceptionniste de nuit</div>    
+        <p>" Oenolgue de père en fils, je souffre des préjugés à mon encontre depuis la pandémie, j'ai donc immigré dans les pays occidentaux, dont la France afin de me reconvertir en réceptionniste de nuit...A l'abri de la lumière..."</p>
+    </div>
+<nav>
+    <ul class = "navbar" id="navbar">
+      <li> <a href = "#container-ban">About</a></li>
+      <li> <a href = "#experience">Expériences</a></li>
+      <li> <a href = "#formation">Formations</a></li>
+      <li> <a href = "#hobby">Hobbies</a></li>
+      <li> <a href = "contact.php"> Contact</a></li>
+    </ul>
+
+    <a class="close" href="#"></a>
+    <a class="menu" href="#navbar">
+        <img src="./images/coffin.png" class = "coffin">
+        MENU
+    </a>
+</nav>  
+</header>
+  
+
+  
+<body>    
   
   <!--Aside part-->
     <aside>
@@ -56,8 +66,8 @@ require 'parcours.php';
             <img src="./images/instagram.resized.png" alt="instagram" title="instagram">
             <img src="./images/linkedin.resized.png" alt="linkedin" title="linkedin">
         </div>
+
     </aside>
-  
 <!--end Aside-->
   
     <main>

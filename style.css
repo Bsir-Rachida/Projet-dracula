@@ -66,7 +66,7 @@ body {
   width: calc(100vw - var(--width-aside));
   background-size: cover;
   background: linear-gradient(var(--ban-color), var(--ban-color)),
-    url(./images/sonn.png);
+  url(./images/sonn.png);
   box-shadow: var(--shadow-image);
   margin-bottom: var(--spacing5);
   margin-top: var(--spacing8);
@@ -182,6 +182,9 @@ aside p {
   background-color: var(--color-dark-opacity);
 }
 
+.menu{
+  display:none;
+}
 li a {
   display: block;
   color: var(--p-color);
@@ -459,12 +462,70 @@ footer a:hover {
 
   /*media screen navbar and hobbies*/
   .navbar {
-    z-index: 0;
-    width: 100vw;
-    position: initial;
+    display: none;
+    flex-direction: column;
+    gap:var(--spacing6);
+    }
+
+.navbar:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-dark-opacity);
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    z-index:2;
+    box-shadow: var(--shadow-image);
+    animation: slide 1.2s ease-in-out;
+}
+
+@keyframes slide {
+  from {
+      top:-200vh;
+  }
+  to {
+      top:0;
+   }
   }
 
-  .hobbies {
+.close {
+  display: none;
+  position:fixed;
+  top: 0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--aside-color);
+  opacity: 0.8;
+  z-index: 0;  
+}
+
+.navbar:target + .close {
+  display: block;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  margin:0;
+}
+  
+header{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: var(--color-dark-opacity);
+}
+  
+.menu img{
+  height: 45px;
+}
+
+.hobbies {
     background-color: var(--color-light-opacity);
     box-shadow: var(--shadow-image);
     align-items: flex-start;
