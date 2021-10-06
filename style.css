@@ -221,26 +221,41 @@ main {
   font-size: var(--font-size-third);
 }
 
-.arabesque{
+.arabesque {
   width: 100px;
 }
 
 .parcours {
+  width: 80%;
+}
+
+.skills,
+.training {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
-  gap: var(--spacing6)
+  gap: var(--spacing6);
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.sep{
+.sep {
   margin-inline-end: 1em;
-  width:25%;
+  width: 25%;
 }
 
-.sep2{
+.sep2 {
   margin-inline-start: 1em;
   width: 25%;
+}
+
+.parcours .skills:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.parcours .training:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .h2timeline {
@@ -264,7 +279,7 @@ main {
 }
 
 .description {
-  width:calc(100% / 2.45);
+  width: calc(100% / 2.45);
   background-color: var(--color-light-opacity);
   box-shadow: 10px 10px 10px black;
 }
@@ -321,7 +336,6 @@ main {
   height: 150px;
   color: var(--p-color);
   justify-content: space-evenly;
-  
 }
 
 i {
@@ -346,7 +360,7 @@ span {
 
 footer {
   background-color: rgba(0, 0, 0, 0.7);
-  background-image:url("./images/sang\(1\).png");
+  background-image: url("./images/sang\(1\).png");
   background-size: contain;
   background-position: top;
   width: calc(100vw - var(--width-aside));
@@ -364,16 +378,19 @@ a {
   text-decoration: none;
 }
 
-footer p, a {
+footer p,
+a {
   height: 30px;
   color: var(--main-p-font);
   font-size: var(--spacing2);
   text-decoration: none;
 }
 
-.cocktail, .music, .batSitting{
+.cocktail,
+.music,
+.batSitting {
   background-color: var(--color-light-opacity);
-  box-shadow:var(--shadow-image);
+  box-shadow: var(--shadow-image);
   height: 45px;
   padding: 25px;
 }
@@ -384,17 +401,16 @@ footer a:hover {
 /*MEDIA QUERY*/
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
-
-  body{
+  body {
     position: relative;
   }
-  
-  main{
-    margin:0;
+
+  main {
+    margin: 0;
   }
   /*responsive aside */
 
-  aside{
+  aside {
     position: initial;
     z-index: 0;
     background-repeat: repeat-x;
@@ -402,48 +418,49 @@ footer a:hover {
     height: 900px;
   }
 
-  .reseaux{
+  .reseaux {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     justify-content: flex-end;
     padding-right: var(--spacing2);
     padding-bottom: var(--spacing2);
   }
   /* END responsive aside */
-  
+
   /* Experience & Formation Media Query */
-  
+
   .experience,
   .formation {
     width: 100vw;
     margin: 0;
   }
-  .sep, .sep2{
+  .sep,
+  .sep2 {
     display: none;
   }
   .parcours {
     flex-direction: column;
   }
-  
+
   .experience .parcours:nth-child(odd) {
     flex-direction: column-reverse;
   }
-  
+
   .formation .parcours:nth-child(even) {
     flex-direction: column-reverse;
   }
-  
+
   .imgtimeline {
     display: none;
   }
 
-  .description{
-    width:auto;
+  .description {
+    width: auto;
   }
-  
-/* End of Experience & Formation Media Query */
-  
-/*media screen navbar and hobbies*/
+
+  /* End of Experience & Formation Media Query */
+
+  /*media screen navbar and hobbies*/
   .navbar {
     display: none;
     flex-direction: column;
@@ -495,6 +512,7 @@ footer a:hover {
   align-items: center;
   margin:0;
 }
+  
 header{
   display:flex;
   align-items: center;
@@ -502,47 +520,48 @@ header{
   height: 70px;
   background-color: var(--color-dark-opacity);
 }
+  
 .menu img{
   height: 45px;
 }
 
 .hobbies {
     background-color: var(--color-light-opacity);
-    box-shadow:var(--shadow-image);
+    box-shadow: var(--shadow-image);
     align-items: flex-start;
     width: max-content;
     height: 300px;
-    flex-direction:column;
-    margin-block: var(--spacing6);   
+    flex-direction: column;
+    margin-block: var(--spacing6);
   }
 
-  .cocktail, .music, .batSitting{
+  .cocktail,
+  .music,
+  .batSitting {
     height: 45px;
     padding: 25px;
     background: none;
     box-shadow: none;
   }
-  .hobby{
+  .hobby {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   /*end media screen nav-bar and hobbies*/
-  
+
   /*media screen container-ban and footer*/
-    .container-ban {
-      display: none;
-    }  
+  .container-ban {
+    display: none;
+  }
 
-    footer {
-      width: 100vw;
-      margin: auto;
-      align-items : flex-start;
-      flex-direction : column;
-      padding-bottom: var(--spacing2);
-      padding-left: var(--spacing2);
-    }
-/*end media screen container-ban and footer*/
-
+  footer {
+    width: 100vw;
+    margin: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: var(--spacing2);
+    padding-left: var(--spacing2);
+  }
+  /*end media screen container-ban and footer*/
 }
-

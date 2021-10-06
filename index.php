@@ -1,3 +1,7 @@
+<?php
+require 'parcours.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,20 +38,21 @@
 </nav>  
 </header>
   
+
+  
+<body>    
+  
   <!--Aside part-->
     <aside>
         <div class = "contact">
-        <h1>Vlad Tepes</h1>
-        <img src="images/arabesque_reverse.png" class="arabesque">
-        <img src="./images/portrait.png" class="portrait" alt="Portrait" title="Portrait">
-        
+            <h1>Vlad Tepes</h1>
+            <img src="images/arabesque_reverse.png" class="arabesque">
+            <img src="./images/portrait.png" class="portrait" alt="Portrait" title="Portrait">
             <p>Château de Bran<br>Bran 507025<br>Transylvanie<br>+40587458954<br>vladbasarab-tepes@gmail.com</p>
             <img src="images/arabesque.png" class="arabesque">
-
         </div>
 
         <div class="Skills">
-            
             <img src = "./images/verre.png" alt="service" title="service">
             <h3>Service client</h3>
             <img src ="./images/verre2.png" alt="office" title="office">
@@ -55,6 +60,7 @@
             <img src = "./images/verre.png" alt="service" title="service">
             <h3>Adaptabilité</h3>
         </div>
+
         <div class="reseaux">
             <img src="./images/facebook.resized.png" alt="facebook" title="facebook">
             <img src="./images/instagram.resized.png" alt="instagram" title="instagram">
@@ -62,141 +68,94 @@
         </div>
 
     </aside>
-  
 <!--end Aside-->
   
-<main>
-<section id ="experience" class='experience'> 
-    
-    
+    <main>
+        <section id ="experience" class='experience'> 
 
-    <div class='header_section'>
-        
-        <img src="./images/arabesque_reverse.png" class="arabesque" alt="arabesque">
-        <h2 class='h2timeline'><img src="images/motifs2.png" alt="" class="sep">Expériences<img src="images/motifs3.png" alt="" class="sep2"></h2>
-        <img src="./images/arabesque.png" class="arabesque" alt="arabesque">
-    </div>
+            <div class='header_section'>
+                <img src="./images/arabesque_reverse.png" class="arabesque" alt="arabesque">
+                <h2 class='h2timeline'><img src="images/motifs2.png" alt="" class="sep">Expériences<img src="images/motifs3.png" alt="" class="sep2"></h2>
+                <img src="./images/arabesque.png" class="arabesque" alt="arabesque">
+            </div>
 
   
-    <div class='parcours'>
-        <div class='description'>
-            <h3>Stage réceptionniste de nuit</h3>
-            <p>Hôtel Four Seasons, Paris, France</p>
-            <ul class='ultimeline'>
-                <li> Accueillir et renseigner le client sur les conditions de séjour</li>
-                <li> Tenue du planning de réservation</li>
-                <li> Traitement du courrier</li>
-                <li> Synchroniser l'activité de l'équipe</li>
-            </ul>
-        </div>
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>2021<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-        <img src='./images/hotel entrance.jpg' class='imgtimeline' alt='image hôtel four seasons'>
-    </div>
+            <div class="parcours">
+                <?php foreach ($skills as $skill) : ?>
+                <div class=skills>    
+                    <div class="description">
+                        <h3><?= $skill['title'] ?></h3>
+                        <p><?= $skill['subtitle'] ?></p>
+                        <ul class='ultimeline'>
+                        <?php foreach ($skill['items'] as $item) : ?>
+                        <li><?= $item ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br><?= $skill['date'] ?><br><img src = "./images/flying-bat-l.png" class="bat"></div>
+                <img src='./images/<?= $skill['image'] ?>'class='imgtimeline' alt='image hôtel four seasons'>
+                </div>
+                <?php endforeach; ?>
+            </div>
     
-    <div class='parcours'>
-        <img src='./images/hotel reception.jpg' class='imgtimeline' alt='image empreinte hôtel'>
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>2020<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-        <div class='description'>
-            <h3>Stage réceptionniste de nuit</h3>
-            <p>Empreinte Hôtel, Orléans, France</p>
-            <ul class='ultimeline'>
-                <li> Accueillir et renseigner le client sur les conditions de séjour</li>
-                <li> Tenue du planning de réservation</li>
-                <li> Traitement du courrier</li>
-            </ul>
-        </div>
-    </div>
+        </section>
 
-    <div class='parcours'>
-        <div class='description'>
-            <h3>Oenologue</h3>
-            <p>Château de Bran, Région Tansylvanienne, Roumanie</p>
-            <ul class='ultimeline'>
-                <li> Oenologue en production viticole familiale, les 'Vins Tepes'</li>
-                <li> Vinification, amélioration de la qualité du vins</li>
-                <li> Dégustations de vins</li>
-            </ul>
-        </div>
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>Depuis<br>1476<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-        <img src='./images/castle.jpg' class='imgtimeline' alt='image château de Bran'>
-    </div>
+        <section id ="formation" class='formation'>
+
+            <div class='header_section'>
+                <img src="./images/arabesque_reverse.png" class="arabesque" alt="arabesque">
+                <h2 class='h2timeline'><img src="images/motifs2.png" alt="" class="sep">Formation<img src="images/motifs3.png" alt="" class="sep2"></h2>
+                <img src="./images/arabesque.png" class="arabesque" alt="arabesque">
+            </div>
+
+            <div class='parcours'>
+                <?php foreach ($trainings as $training) : ?>
+                <div class= 'training'>
+                    <img src='./images/<?= $training['image'] ?>'class='imgtimeline' alt='image clefs hôtel'>
+                    <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br><?= $training['date'] ?><br><img src = "./images/flying-bat-l.png" class="bat"></div>
+                    <div class='description'>
+                        <h3><?= $training['title'] ?></h3>
+                        <p><?= $training['subtitle'] ?></p>  
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+        </section>
   
-</section>
+        <section id="hobby" class="hobby">
 
-<section id ="formation" class='formation'>
-
-    <div class='header_section'>
-
-        <img src="./images/arabesque_reverse.png" class="arabesque" alt="arabesque">
-        <h2 class='h2timeline'><img src="images/motifs2.png" alt="" class="sep">Formation<img src="images/motifs3.png" alt="" class="sep2"></h2>
-        <img src="./images/arabesque.png" class="arabesque" alt="arabesque">
-
-    </div>
-
-    <div class='parcours'>
-    
-        <img src='./images/hotel keys.jpg' class='imgtimeline' alt='image clefs hôtel'>
-
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>2019<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-
-        <div class='description'>
-
-            <h3>Titre professionnel réceptionniste en hôtellerie</h3>
-            <p>AFPA, Tours</p><br>
-            <p>6 mois, titre de niveau 4</p>  
-
-        </div>
-
-    </div>
-
-    <div class='parcours'>
-        <div class='description'>
-            <h3>Apprenti dans l'entreprise 'Vins Tepes'</h3>
-            <p>Château de Bran, Région Tansylvanienne, Roumanie</p><br>
-            <p>Oenologue de père en fils depuis le IV siècle</p>  
-        </div>
-        <div class='year'><img src = "./images/flying-bat-r.png" class="bat"><br>1476<br><img src = "./images/flying-bat-l.png" class="bat"></div>
-        <img src='./images/cave vin.jpg' class='imgtimeline' alt='image cave à vins'>
-    </div>
-</section>
-  
-<section id="hobby" class="hobby">
-
-    <div class='header_hobbies'>
-
-        <img src="./images/arabesque_reverse.png" class="arabesque" alt="arabesque">
-        <h2 class="h2timeline"> <img src="images/motifs2.png" alt="" class="sep">Hobbies<img src="images/motifs3.png" alt="" class="sep2"></h2>
-        <img src="./images/arabesque.png" class="arabesque" alt="arabesque">        
-
-    </div>
+            <div class='header_hobbies'>
+                <img src="./images/arabesque_reverse.png" class="arabesque" alt="arabesque">
+                <h2 class="h2timeline"> <img src="images/motifs2.png" alt="" class="sep">Hobbies<img src="images/motifs3.png" alt="" class="sep2"></h2>
+                <img src="./images/arabesque.png" class="arabesque" alt="arabesque">        
+            </div>
    
-   <div class="hobbies">   
-     <div class="cocktail"> 
+            <div class="hobbies">   
+                <div class="cocktail"> 
+                    <h3><i class="fas fa-cocktail"></i> 
+                    <span> Dégustation de vin </span></h3>
+                </div>  
 
-        <h3><i class="fas fa-cocktail"></i> 
-        <span> Dégustation de vin </span></h3>
-       
-     </div>   
-     <div class="music">
+                <div class="music">
+                    <h3><i class="fas fa-music"></i> 
+                    <span>Musique classique et baroque </span></h3>
+                </div> 
 
-        <h3><i class="fas fa-music"></i> 
-        <span>Musique classique et baroque </span></h3>
+                <div class="batSitting">
+                    <h3><img class="batsitting" src ="images/bat.png">
+                    <span> Bat sitting </span></h3>
+                </div>   
+        </section>
 
-     </div>   
-     <div class="batSitting">
-
-        <h3><img class="batsitting" src ="images/bat.png">
-        <span> Bat sitting </span></h3>
-        
-     </div>   
-   </section>
-
-</main>
+    </main>
   
-<footer>
-    <p> © 2021 CV Vlad Tepes - Tous droits réservés </p>
-    <a href = "legalNotice.html">Mentions légales</a>
-</footer>
+    <footer>
+
+        <p> © 2021 CV Vlad Tepes - Tous droits réservés </p>
+        <a href = "legalNotice.html">Mentions légales</a>
+
+    </footer>
 
 </body>
 </html>
