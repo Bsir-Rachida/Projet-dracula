@@ -314,6 +314,7 @@ main {
   height:150px;
   color:var(--p-color);
   justify-content: space-evenly;
+  
 }
 
 i{
@@ -336,26 +337,31 @@ span{
 
 /*footer*/
 footer{
-  background-color: rgba(0,0,0, 0.7);
+  background-color:var(--background-color);
   background-image:url("./images/sang\(1\).png");
   background-size: contain; 
   background-position: top;
   width: calc(100vw - var(--width-aside));
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  box-shadow: 0 -10px 30px black;
-  margin-left:300px;
+  margin-left: var(--width-aside);
 }
 
 footer p, a {
-  color: var(--color-light-);
-  font-size: 20px;;
+  height: 30px;
+  color: var(--main-p-font);
+  font-size: var(--spacing2);
   text-decoration: none;
-
 }
 
+.cocktail, .music, .batSitting{
+  background-color: var(--color-light-opacity);
+  box-shadow:var(--shadow-image);
+  height: 45px;
+  padding: 25px;
+}
 
 footer a:hover {
 color: var(--aside-color);
@@ -363,4 +369,27 @@ color: var(--aside-color);
   }
 /*end of footer */
 
+/*media screen navbar and hobbies*/
+@media screen and (min-width: 350px) and (max-width: 550px) {
+  .navbar {
+    z-index :0;
+  }  
+  .hobbies {
+    background-color: var(--color-light-opacity);
+    box-shadow:var(--shadow-image);
+    align-items: flex-start;
+    width: max-content;
+    height: 300px;
+    flex-direction:column;
+    margin-block: 20px;
+   
+  }
+  .cocktail, .music, .batSitting{
+    height: 45px;
+    padding: 25px;
+    background: none;
+    box-shadow: none;
+  }
+}
+/*end media screen nav-bar and hobbies*/
 
