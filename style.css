@@ -366,8 +366,6 @@ footer p, a {
 
 footer a:hover {
   color: var(--aside-color);
-}
-/*end of footer */
 
 /*MEDIA QUERY*/
 
@@ -422,8 +420,20 @@ footer a:hover {
     box-shadow: none;
   }
   /*end media screen nav-bar and hobbies*/
+  
+  /*media screen container-ban and footer*/
+    .container-ban {
+      display: none;
+    }  
+
+    footer {
+      width: 100vw;
+      margin: auto;
+      align-items : flexstart;
+      flex-direction : column;
+      padding-bottom: var(--spacing2);
+      padding-left: var(--spacing2);
+    }
+/*end media screen container-ban and footer*/
 }
-
-
-
 
