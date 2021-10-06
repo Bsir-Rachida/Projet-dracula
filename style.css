@@ -221,15 +221,27 @@ main {
   
   font-size: var(--font-size-third);
 }
+
 .arabesque{
   width: 100px;
 }
 
 .parcours {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 80%;
+  gap: var(--spacing6)
+}
+
+.sep{
+  margin-inline-end: 1em;
+  width:25%;
+}
+
+.sep2{
+  margin-inline-start: 1em;
+  width: 25%;
 }
 
 .h2timeline {
@@ -253,7 +265,7 @@ main {
 }
 
 .description {
-  width: 400px;
+  width:calc(100% / 2.45);
   background-color: var(--color-light-opacity);
   box-shadow: 10px 10px 10px black;
   
@@ -276,7 +288,7 @@ main {
 }
 
 .imgtimeline {
-  width: 400px;
+  width: calc(100% / 2.45);
   box-shadow: var(--shadow-image);
 }
 
@@ -363,4 +375,28 @@ color: var(--aside-color);
   }
 /*end of footer */
 
+@media screen and (min-width:360px) and (max-width:550px){
+
+  body{
+    position: relative;
+  }
+
+  /*responsive aside */
+
+  aside{
+    position: initial;
+    z-index: 0;
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 900px;
+  }
+
+  .reseaux{
+    position: absolute;
+    bottom:0;
+    justify-content: flex-end;
+    padding-right: var(--spacing1);
+    padding-bottom: var(--spacing1);
+  }
+}
 
