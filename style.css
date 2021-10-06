@@ -377,14 +377,18 @@ footer p, a {
 
 footer a:hover {
   color: var(--aside-color);
-
+}
 /*MEDIA QUERY*/
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
-    body{
+
+  body{
     position: relative;
   }
-
+  
+  main{
+    margin:0;
+  }
   /*responsive aside */
 
   aside{
@@ -399,8 +403,8 @@ footer a:hover {
     position: absolute;
     bottom:0;
     justify-content: flex-end;
-    padding-right: var(--spacing1);
-    padding-bottom: var(--spacing1);
+    padding-right: var(--spacing2);
+    padding-bottom: var(--spacing2);
   }
   /* END responsive aside */
   
@@ -409,9 +413,11 @@ footer a:hover {
   .experience,
   .formation {
     width: 100vw;
-    margin: auto;
+    margin: 0;
   }
-  
+  .sep, .sep2{
+    display: none;
+  }
   .parcours {
     flex-direction: column;
   }
@@ -427,12 +433,18 @@ footer a:hover {
   .imgtimeline {
     display: none;
   }
+
+  .description{
+    width:auto;
+  }
   
 /* End of Experience & Formation Media Query */
   
 /*media screen navbar and hobbies*/
   .navbar {
     z-index :0;
+    width:100vw;
+    position: initial;
   }  
   
   .hobbies {
@@ -442,14 +454,19 @@ footer a:hover {
     width: max-content;
     height: 300px;
     flex-direction:column;
-    margin-block: 20px;
-   
+    margin-block: var(--spacing6);   
   }
+
   .cocktail, .music, .batSitting{
     height: 45px;
     padding: 25px;
     background: none;
     box-shadow: none;
+  }
+  .hobby{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   /*end media screen nav-bar and hobbies*/
   
@@ -461,7 +478,7 @@ footer a:hover {
     footer {
       width: 100vw;
       margin: auto;
-      align-items : flexstart;
+      align-items : flex-start;
       flex-direction : column;
       padding-bottom: var(--spacing2);
       padding-left: var(--spacing2);
