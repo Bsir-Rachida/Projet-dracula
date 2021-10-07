@@ -17,6 +17,17 @@
     
     width: 100vw;
     }
+
+    .message {
+        width: 100vw;
+        margin-inline: var(--spacing2);
+        left:0;
+    }
+    
+     .message p {
+        width: 100vw;
+    }
+      
 }
 
 @media screen and (max-width:600px) and (min-width:360px){
@@ -25,3 +36,5 @@
         background:none;
     }
 }
+
+

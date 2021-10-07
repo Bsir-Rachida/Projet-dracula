@@ -4,7 +4,9 @@
         <img src="images/arabesque_reverse.png" class="arabesque">
         <img src="./images/portrait.png" class="portrait" alt="Portrait" title="Portrait">
         
-            <p>Château de Bran<br>Bran 507025<br>Transylvanie<br>+40587458954<br>vladbasarab-tepes@gmail.com</p>
+            <p><img src="images/castle.png" alt="castle" class="castle">Château de Bran<br>Bran 507025<br>Transylvanie<br>
+            <img src="images/telephone.png" alt="telephone" class="telephone">+40587458954<br>
+            <img src="images/email.png" alt="email" class="email">vladbasarab-tepes@gmail.com</p>
             <img src="images/arabesque.png" class="arabesque">
 
         </div>
