@@ -72,6 +72,7 @@ body {
   box-shadow: var(--shadow-image);
   margin-bottom: var(--spacing5);
   margin-top: var(--spacing8);
+  background-position: top;
 }
 
 .container-ban p {
@@ -475,10 +476,97 @@ button:active {
   filter: brightness(70%); 
 }
 
+.message{
+  display: flex;
+  justify-content: center;
+  width: calc( 100vw - var(--width-aside));
+  height: 100vh;
+  color: green;
+  font-size: var(--font-size-third);
+  margin-right: 0;
+  align-items: flex-start;
+  position: absolute;
+  left: var(--width-aside);
+  top: 70px;
+  }
+  
+
 /*end form css */
 
 
 /*MEDIA QUERY*/
+
+
+@media screen and (max-width:1300px){
+  
+  .skills, .training {
+    flex-direction: row;
+    gap:0;
+    justify-content: space-around;
+    padding-inline: var(--spacing2);
+  }
+  .description{
+    width: 65%;
+    margin-block: var(--spacing4);
+  }
+
+  .year{
+    order:-1;
+  }
+
+  .imgtimeline {
+    display:none;
+  }
+
+  .parcours .skills:nth-child(even) {
+    flex-direction: row;
+  }
+  
+  .parcours .training:nth-child(even) {
+    flex-direction: row;
+  }
+
+
+.hobbies {
+  background-color: var(--color-light-opacity);
+  box-shadow: var(--shadow-image);
+  align-items: flex-start;
+  width: 50%;
+  height: 300px;
+  flex-direction: column;
+  margin-block: var(--spacing6);
+}
+
+.cocktail,
+.music,
+.batSitting {
+  height: 45px;
+  padding: var(--spacing3);
+  background: none;
+  box-shadow: none;
+}
+.hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+}
+
+@media screen and (max-width:1000px){
+  .sep, .sep2{
+    display:none;
+  }
+
+  .title {
+    font-size: 1.7em;
+  }
+
+  .container-ban p {
+    font-size: 1.3em;
+  }
+}
+
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
   body {
@@ -584,9 +672,7 @@ button:active {
 li a{
   font-size: var(--font-size-second);
 }
-  
 
-/* Element | http://localhost:8000/index.php */
 
 nav {  
   position: fixed;
@@ -602,7 +688,7 @@ header{
   background-color: var(--background-color);
 }
 .hobbies{
-  width:300px;
+  width:85%;
 }
   
 .menu img{
@@ -627,75 +713,5 @@ header{
   /*end media screen container-ban and footer*/
 }
 
-
-@media screen and (max-width:1300px){
-  
-  .skills, .training {
-    flex-direction: row;
-    gap:0;
-    justify-content: space-around;
-    padding-inline: var(--spacing2);
-  }
-  .description{
-    width: 65%;
-    margin-block: var(--spacing4);
-  }
-
-  .year{
-    order:-1;
-  }
-
-  .imgtimeline {
-    display:none;
-  }
-
-  .parcours .skills:nth-child(even) {
-    flex-direction: row;
-  }
-  
-  .parcours .training:nth-child(even) {
-    flex-direction: row;
-  }
-
-
-.hobbies {
-  background-color: var(--color-light-opacity);
-  box-shadow: var(--shadow-image);
-  align-items: flex-start;
-  width: 85%;
-  height: 300px;
-  flex-direction: column;
-  margin-block: var(--spacing6);
-}
-
-.cocktail,
-.music,
-.batSitting {
-  height: 45px;
-  padding: var(--spacing3);
-  background: none;
-  box-shadow: none;
-}
-.hobby {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-}
-}
-
-@media screen and (max-width:1000px){
-  .sep, .sep2{
-    display:none;
-  }
-
-  .title {
-    font-size: 1.7em;
-  }
-
-  .container-ban p {
-    font-size: 1.3em;
-  }
-}
 
 
