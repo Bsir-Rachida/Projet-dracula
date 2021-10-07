@@ -1,0 +1,27 @@
+@media screen and (max-width:800px){
+
+    aside{
+        display: none;
+    }
+        
+    .container-form {
+    
+    justify-content: center;
+    }
+
+    main {  
+    margin-left: 0;
+    }
+
+    .navbar {
+    
+    width: 100vw;
+    }
+}
+
+@media screen and (max-width:600px) and (min-width:360px){
+
+    main{
+        background:none;
+    }
+}

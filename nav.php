@@ -1,6 +1,6 @@
 
 <nav>
-    <ul class = "navbar">
+    <ul id="navbar" class = "navbar">
       <li> <a href = "index.php#container-ban">About</a></li>
       <li> <a href = "index.php#experience">Expériences</a></li>
       <li> <a href = "index.php#formation">Formations</a></li>
