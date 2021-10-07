@@ -1,6 +1,7 @@
 <?php
 $data = array_map('trim', $_POST);
 $errors= [];
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (empty($_POST['user_lastName'])) {
             $errors[]= 'Merci de renseigner votre nom';
@@ -84,15 +85,15 @@ $errors= [];
     <div class="container-form">
 <form action="" method="post" >
 <?php if (!empty($errors)) {
-      foreach(!$errors as $error) {
+      foreach($errors as $error) {
            echo $error . '<br>'.'<br>';
-        }
-    } 
+    }
+}
     ?>
     <div class="forms">
         <div>
             <label for="lastName" class= "labelForm">Nom :</label>
-            <input type="text" id="lastName" name="user_lastName" value="<?= $data['user_lastName'] ?? '' ?>" required>
+            <input type="text" id="lastName" name="user_lastName" value="<?= $data['user_lastName'] ?? '' ?>" required >
         </div>
          <div>
             <label for="firstName" class= "labelForm">Prénom :</label>
@@ -111,8 +112,7 @@ $errors= [];
             <label for="msg" class= "labelForm">Message :</label>
             <textarea id="msg" name="user_message" value="<?= $data['user_message'] ?? '' ?>" required></textarea>
         </div>
-        <div class= "button">
-            <button type= 'submit'>Envoyer</button>
+            <button>Envoyer</button>
         </div>      
     </div>
 </form>
