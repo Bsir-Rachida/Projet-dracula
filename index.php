@@ -27,7 +27,9 @@ require 'parcours.php';
       <li> <a href = "#experience">Expériences</a></li>
       <li> <a href = "#formation">Formations</a></li>
       <li> <a href = "#hobby">Hobbies</a></li>
-      <li> <a href = "contact.php"> Contact</a></li>
+
+      <li> <a href = "contact.php">Contact</a></li>
+
     </ul>
 
     <a class="close" href="#"></a>
