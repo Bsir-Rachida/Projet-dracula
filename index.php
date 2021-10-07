@@ -21,57 +21,15 @@ require 'parcours.php';
         <div class = "title">Réceptionniste de nuit</div>    
         <p>" Oenolgue de père en fils, je souffre des préjugés à mon encontre depuis la pandémie, j'ai donc immigré dans les pays occidentaux, dont la France afin de me reconvertir en réceptionniste de nuit...A l'abri de la lumière..."</p>
     </div>
-<nav>
-    <ul class = "navbar" id="navbar">
-      <li> <a href = "#container-ban">About</a></li>
-      <li> <a href = "#experience">Expériences</a></li>
-      <li> <a href = "#formation">Formations</a></li>
-      <li> <a href = "#hobby">Hobbies</a></li>
-
-      <li> <a href = "contact.php">Contact</a></li>
-
-    </ul>
-
-    <a class="close" href="#"></a>
-    <a class="menu" href="#navbar">
-        <img src="./images/coffin.png" class = "coffin">
-        MENU
-    </a>
-</nav>  
+    <!--<nav>-->
+<?php include('nav.php'); ?>   
+    <!--</nav>-->
 </header>
   
-
-  
 <body>    
-  
-  <!--Aside part-->
-    <aside>
-        <div class = "contact">
-            <h1>Vlad Tepes</h1>
-            <img src="images/arabesque_reverse.png" class="arabesque">
-            <img src="./images/portrait.png" class="portrait" alt="Portrait" title="Portrait">
-            <p>Château de Bran<br>Bran 507025<br>Transylvanie<br>+40587458954<br>vladbasarab-tepes@gmail.com</p>
-            <img src="images/arabesque.png" class="arabesque">
-        </div>
-
-        <div class="Skills">
-            <img src = "./images/verre.png" alt="service" title="service">
-            <h3>Service client</h3>
-            <img src ="./images/verre2.png" alt="office" title="office">
-            <h3>Microsoft Office</h3>
-            <img src = "./images/verre.png" alt="service" title="service">
-            <h3>Adaptabilité</h3>
-        </div>
-
-        <div class="reseaux">
-            <img src="./images/facebook.resized.png" alt="facebook" title="facebook">
-            <img src="./images/instagram.resized.png" alt="instagram" title="instagram">
-            <img src="./images/linkedin.resized.png" alt="linkedin" title="linkedin">
-        </div>
-
-    </aside>
-<!--end Aside-->
-  
+    <!--aside-->
+<?php include('aside.php'); ?>
+    <!--end aside-->
     <main>
         <section id ="experience" class='experience'> 
 
@@ -151,13 +109,8 @@ require 'parcours.php';
         </section>
 
     </main>
-  
-    <footer>
-
-        <p> © 2021 CV Vlad Tepes - Tous droits réservés </p>
-        <a href = "legalNotice.html">Mentions légales</a>
-
-    </footer>
-
+    <!--footer-->
+<?php include('footer.php'); ?>
+    <!--end footer-->
 </body>
 </html>
