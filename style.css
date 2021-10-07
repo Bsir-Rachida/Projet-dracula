@@ -112,10 +112,10 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--aside-color);
+  background-color:var(--aside-color);
   background-image: url("./images/sang.png");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: bottom -100px right 0px;
   z-index: 2;
   border-right: 3px double var(--line-color);
 }
@@ -133,7 +133,9 @@ aside h3 {
   margin-top: var(--spacing1);
   text-align: center;
 }
-
+.contact img{
+  margin-inline-end: var(--spacing1);
+}
 aside p {
   font-size: 20px;
   text-align: center;
@@ -193,7 +195,7 @@ li a {
   display: block;
   color: var(--p-color);
   text-decoration: none;
-  font-size: var(--font-size-second);
+  font-size: clamp(1em, 3vw, 3em);
   letter-spacing: var(--letter-spacing-second);
   padding-bottom: var(--spacing1);
 }
@@ -412,15 +414,18 @@ footer a:hover {
 
   main {
     margin: 0;
+    background:url( "./images/sang\(1\).png") repeat-x;
+    background-position: top;
+   
   }
   /*responsive aside */
 
   aside {
     position: initial;
     z-index: 0;
-    background-repeat: repeat-x;
+    background-image: none;
     width: 100vw;
-    height: 900px;
+    height: auto;
   }
 
   .reseaux {
@@ -434,9 +439,17 @@ footer a:hover {
 
   /* Experience & Formation Media Query */
 
+  .header_section{
+
+    margin-top: var(--spacing8);
+  }
+  .bat{
+    padding-block:0;
+  }
+
   .experience,
   .formation {
-    width: 90vw;
+    width: 100vw;
     margin: 0;
   }
   
@@ -494,13 +507,29 @@ footer a:hover {
   align-items: center;
   margin:0;
 }
+
+li a{
+  font-size: var(--font-size-second);
+}
   
-header{
-  display:flex;
-  align-items: center;
-  justify-content: center;
+
+/* Element | http://localhost:8000/index.php */
+
+nav {  
+  position: fixed;
   height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-dark-opacity);
+}
+header{
+  height: 70px;
+  background-color: var(--background-color);
+}
+.hobbies{
+  width:300px;
 }
   
 .menu img{
@@ -524,6 +553,7 @@ header{
   }
   /*end media screen container-ban and footer*/
 }
+
 
 @media screen and (max-width:1300px){
   
@@ -559,7 +589,7 @@ header{
   background-color: var(--color-light-opacity);
   box-shadow: var(--shadow-image);
   align-items: flex-start;
-  width: max-content;
+  width: 85%;
   height: 300px;
   flex-direction: column;
   margin-block: var(--spacing6);
@@ -577,8 +607,9 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 }
-}
+
 
 @media screen and (max-width:1000px){
   .sep, .sep2{
@@ -592,14 +623,7 @@ header{
   .container-ban p {
     font-size: 1.3em;
   }
-
-
-  li a {
-    font-size: var(--font-size-third);
-  }
 }
-
-
 
 
 /*formulaire */
@@ -655,7 +679,7 @@ textarea {
    border-radius: 4px;
    background-color: var(--aside-color);
    color: var(--p-color);
-   padding-inline: 8px;
+   padding-inline: var(--spacing1);
    padding-block: 4px;
    font-family: var(--main-p-font);
    position: relative;
@@ -668,4 +692,6 @@ button:hover {
 
 button:active {
   filter: brightness(70%); 
+}
+
 }

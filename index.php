@@ -27,9 +27,12 @@ require 'parcours.php';
 </header>
   
 <body>    
+
     <!--aside-->
 <?php include('aside.php'); ?>
     <!--end aside-->
+
+
     <main>
         <section id ="experience" class='experience'> 
 
