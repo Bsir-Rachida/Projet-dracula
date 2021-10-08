@@ -35,6 +35,16 @@
     main{
         background:none;
     }
+    .forms{
+        margin-top: 60px;
+        width: 340px;
+    }
+    input{
+        width: 340px;
+    }
+    textarea{
+     width: 340px;
+    }
 }
 
 
