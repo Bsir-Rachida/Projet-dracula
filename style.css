@@ -116,7 +116,7 @@ aside {
   background-color:var(--aside-color);
   background-image: url("./images/sang.png");
   background-repeat: no-repeat;
-  background-position: bottom -100px right 0px;
+  background-position: bottom;
   z-index: 2;
   border-right: 3px double var(--line-color);
 }
@@ -144,14 +144,14 @@ aside p {
   margin: var(--spacing1);
   line-height: 30px;
 }
-.Skills {
+.Skill {
   padding: var(--spacing1);
   margin: var(--spacing2);
 }
-.Skills h3:first-child {
+.Skill h3:first-child {
   margin-top: 0;
 }
-.Skills img {
+.Skill img {
   width: 150px;
 }
 

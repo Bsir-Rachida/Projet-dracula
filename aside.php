@@ -11,7 +11,7 @@
 
         </div>
 
-        <div class="Skills">
+        <div class="Skill">
             
             <img src = "./images/verre.png" alt="service" title="service">
             <h3>Service client</h3>
