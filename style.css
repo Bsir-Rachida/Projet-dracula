@@ -713,5 +713,12 @@ header{
   /*end media screen container-ban and footer*/
 }
 
+@media screen and (max-width: 415px) and (min-width: 360px) {
+
+  .description {
+    width: 90%;
+  }
+}
+  
 
 
