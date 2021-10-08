@@ -476,20 +476,21 @@ button:active {
   filter: brightness(70%); 
 }
 
+
 .message{
   display: flex;
   justify-content: center;
   width: calc( 100vw - var(--width-aside));
-  height: 100vh;
-  color: green;
-  font-size: var(--font-size-third);
+  color: var(--p-color);
+  font-size: var(--font-size-second);
   margin-right: 0;
-  align-items: flex-start;
-  position: absolute;
-  left: var(--width-aside);
-  top: 70px;
+  align-items: center;
+  background-color: var(--color-light-opacity);
+  box-shadow: var(--shadow-image);
+  padding-left: 100px;
+  padding-right: 100px;
   }
-  
+ 
 
 /*end form css */
 
